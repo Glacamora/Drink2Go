@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drink2Go</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Интернет-магазин кофейных напитков «Drink@Go»">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page__body">
+    <div class="page-wrapper">
+      <header class="header">
+        <nav class="navigation">
+          <a class="nav__logo"></a>
+          <h1 class="nav__title">Интернет-магазин кофейных напитков</h1>
+          <ul class="nav__list">
+            <li class="nav__item">Главная</li>
+            <li class="nav__item">Каталог</li>
+            <li class="nav__item">Доставка</li>
+            <li class="nav__item">О нас</li>
+          </ul>
+          <ul class="nav__cabinet">
+            <li class="nav__cabinet-account">Войти</li>
+            <li class="nav__cabinet-card">Корзина</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="main-slider">
+          <div class="main-slider__container">
+            <button class="main-slider__button main-slider__button_left" type="button"></button>
+            <div class="main-slider__wrapper">
+              <div class="main-slider__image-wrapper">
+                <img class="slider__image">
+              </div>
+              <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/flat_white@1x.webp 1x, images/slider/desktop/flat_white@2x.webp 2x"
+                  width="600" height="600">
+                <source type="image/webp" media="(min-width: 768px)"
+                srcset="images/slider/tablet/flat_white@1x.webp 1x, images/slider/tablet/flat_white@2x.webp 2x"
+                width="476" height="476">
+
+                <source media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/flat_white@1x.png 1x, images/slider/desktop/flat_white@2x.png 2x"
+                  width="600" height="600">
+                <source media="(min-width: 768px)"
+                srcset="images/slider/tablet/flat_white@1x.png 1x, images/slider/tablet/flat_white@2x.png 2x"
+                width="476" height="476">
+                <img class="main-slider__image" src="images/slider/flat_white.png"
+                  srcset="images/slider/flat_white@2x.png 2x" width="280" height="280"
+                  alt="Напиток Декаф Флэт Уайт">
+              </picture>
+              <div class="main-slider__info">
+                <p class="main-slider__new">Новинка!</p>
+                <h3 class="main-slider__title">Декаф Флэт Уайт</h3>
+                <p class="main-slider__text">Свежесваренный кофе без кофеина из Эфиопии с&nbspнатуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <div class="main-slider__order">
+                  <span class="main-slider__price">
+                    <p class="main-slider__price main-slider__price_old">295₽</p>
+                    <p class="main-slider__price">225₽</p>
+                  </span>
+                  <button class="main-slider__order-btn button" type="button">Заказать</button>
+                </div>
+              </div>
+
+              <div class="main-slider__toggles">
+                <button class="main-slider__toggle main-slider__toggle_active focus" type="button" tabindex="0">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button>
+                <button class="main-slider__toggle focus" type="button" tabindex="0">
+                    <span class="visually-hidden">Второй слайд</span>
+                </button>
+                <button class="main-slider__toggle focus" type="button" tabindex="0">
+                  <span class="visually-hidden">Третий слайд</span>
+                </button>
+              </div>
+            </div>
+            <button class="main-slider__button main-slider__button_right" type="button"></button>
+          </div>
+
+          <div class="main-slider__wrapper visually-hidden">
+            <button class="main-slider__button"></button>
+            <div class="main-slider__image-wrapper">
+              <img class="slider__image">
+            </div>
+            <div class="main-slider__info">
+              <p>Новинка!</p>
+              <h3 class="main-slider__title">Лавандовый Латте</h3>
+              <p class="main-slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            </div>
+            <div class="main-slider__order">
+              <p class="main-slider__price main-slider__price_old">285₽</p>
+              <p class="main-slider__price">265₽</p>
+              <button class="main-slider__order-btn">Заказать</button>
+            </div>
+            <button class="main-slider__button"></button>
+            <div class="main-slider__toggles">
+              <button class="main-slider__toggle main-slider__toggle_active focus" type="button" tabindex="0">
+                <span class="visually-hidden">Первый слайд</span>
+              </button>
+              <button class="main-slider__toggle focus" type="button" tabindex="0">
+                  <span class="visually-hidden">Второй слайд</span>
+              </button>
+              <button class="main-slider__toggle focus" type="button" tabindex="0">
+                <span class="visually-hidden">Третий слайд</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="main-slider__wrapper visually-hidden">
+            <button class="main-slider__button"></button>
+            <div class="main-slider__image-wrapper">
+              <img class="slider__image">
+            </div>
+            <div class="main-slider__info">
+              <p>Новинка!</p>
+              <h3 class="main-slider__title">Тройной Эспрессо</h3>
+              <p class="main-slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            </div>
+            <div class="main-slider__order">
+              <p class="main-slider__price main-slider__price_old">395₽</p>
+              <p class="main-slider__price">375₽</p>
+              <button class="main-slider__order-btn">Заказать</button>
+            </div>
+            <button class="main-slider__button"></button>
+            <div class="main-slider__toggles">
+              <button class="main-slider__toggle main-slider__toggle_active focus" type="button" tabindex="0">
+                <span class="visually-hidden">Первый слайд</span>
+              </button>
+              <button class="main-slider__toggle focus" type="button" tabindex="0">
+                  <span class="visually-hidden">Второй слайд</span>
+              </button>
+              <button class="main-slider__toggle focus" type="button" tabindex="0">
+                <span class="visually-hidden">Третий слайд</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
