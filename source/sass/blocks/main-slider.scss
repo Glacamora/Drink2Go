@@ -27,14 +27,6 @@
 }
 
 .main-slider__new {
-  color: #7859CF;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 4px;
   order: 1;
 }
 
@@ -118,10 +110,12 @@
 
   &_left {
     background-image: url(../../images/slider/slider-arrow-left.svg);
+    right: -17px;
   }
 
   &_right {
     background-image: url(../../images/slider/slider-arrow-right.svg);
+    left: -17px;
   }
 }
 

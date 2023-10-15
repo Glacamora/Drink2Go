@@ -9,7 +9,7 @@ import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
-import { stacksvg } from "gulp-stacksvg";
+//import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
@@ -85,7 +85,7 @@ export function optimizeVector () {
 export function createStack () {
   return gulp.src('source/images/icons/**/*.svg')
     .pipe(svgo())
-    .pipe(stacksvg())
+    //.pipe(stacksvg())
     .pipe(gulp.dest('build/images/icons'));
 }
 
@@ -123,6 +123,7 @@ function watchFiles () {
   gulp.watch('source/js/script.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
   gulp.watch('source/images/**/*.png', gulp.series(optimizeImages));
+  gulp.watch('source/images/**/*.svg', gulp.series(createStack));
 }
 
 function compileProject (done) {
