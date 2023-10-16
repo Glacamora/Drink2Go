@@ -1,0 +1,34 @@
+.map {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/map/map-pin.svg");
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 50px;
+    top: 188px;
+    left: 153px;
+  }
+}
+
+@media (min-width: $tablet-width){
+  .map {
+    &::before {
+      top: 216px;
+      left: 379px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    &::before {
+      top: 246px;
+      left: 714px;
+    }
+  }
+}
