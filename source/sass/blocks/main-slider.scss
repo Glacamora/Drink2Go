@@ -1,13 +1,15 @@
-.main-slider {
-  background-color: $flat_white;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-bottom: 60px
-}
-
 .main-slider__container {
   display: flex;
   justify-content: center;
+  background-color: $flat_white;
+
+  &_lavender {
+    background-color: $lavender_latte;
+  }
+
+  &_espresso {
+    background-color: $espresso;
+  }
 }
 
 .main-slider__wrapper {
@@ -15,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 60px;
 }
 
 .main-slider__info {
@@ -84,16 +87,9 @@
 }
 
 .main-slider__order-btn {
-  border: none;
-  border-radius: 4px;
-  background-color: #7859CF;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #ffffff;
-  padding: 8px 20px;
-  cursor: pointer;
 }
 
 .main-slider__button {
@@ -124,8 +120,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-slider {
+  .main-slider__container {
     background: linear-gradient(180deg, $flat_white 0, $flat_white 77%, $base_white 77%);
+
+    &_lavender {
+      background: inear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $lavender_latte 77%);
+    }
+
+    &_espresso {
+      background: inear-gradient(180deg, $espresso 0, $espresso 77%, $espresso 77%);
+    }
   }
 
   .main-slider__new {
@@ -170,11 +174,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-slider__wrapper {
-    flex-direction: row-reverse;
+  .main-slider__container {
+    background: $flat_white;
   }
 
-  .main-slider {
+  .main-slider__wrapper {
+    flex-direction: row-reverse;
     background: $flat_white;
     padding-bottom: 79px;
   }
@@ -231,7 +236,7 @@
 
     &:hover,
     &:focus {
-      background-color: $primary_opacity_25;
+      background-color: $altprimary_opacity_25;
     }
 
     &:active {

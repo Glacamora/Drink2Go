@@ -1,7 +1,7 @@
 .footer__social {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -17,12 +17,34 @@
 
 .footer__social-list {
   display: flex;
-  gap: 29px;
+}
+
+.footer__social-link {
+  padding: 10px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $altprimary_opacity_25;
+  }
 }
 
 .footer__svg,
 .footer__academy-logo {
   fill: $base_grey;
+}
+
+.footer__svg {
+  transform: translateY(6px) translateY(-1px);
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: $base_primary;
+  }
 }
 
 .footer__items,
@@ -49,6 +71,10 @@
 .footer__list {
   list-style-type: none;
   margin-top: 8px;
+
+  &_contacts {
+    padding-left: 19px;
+  }
 }
 
 .footer__link {
@@ -64,10 +90,34 @@
 
   &_address,
   &_tel {
+    position: relative;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     text-transform: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      top: 8px;
+      left: -19px;
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+  &_address {
+    &::before {
+      background-image: url(../../images/icons/address.svg);
+    }
+  }
+
+  &_tel {
+    &::before{
+      background-image: url(../../images/icons/tel.svg);
+    }
   }
 }
 
@@ -113,7 +163,7 @@
   }
 
   .footer__social-list {
-    gap: 38px;
+    gap: 20px;
   }
 
   .footer__nav {
