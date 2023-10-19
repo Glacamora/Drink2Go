@@ -57,7 +57,7 @@
       </header>
       <main>
         <section class="main-slider">
-          <div class="main-slider__container">
+          <div class="main-slider__container main-slider__container_flat main-slider__container_active">
             <button class="main-slider__button main-slider__button_left" type="button"></button>
             <div class="main-slider__wrapper">
               <picture class="main-slider__picture">
@@ -67,7 +67,6 @@
                 <source type="image/webp" media="(min-width: 768px)"
                 srcset="images/slider/tablet/flat_white@1x.webp 1x, images/slider/tablet/flat_white@2x.webp 2x"
                 width="476" height="476">
-
                 <source media="(min-width: 1440px)"
                   srcset="images/slider/desktop/flat_white@1x.png 1x, images/slider/desktop/flat_white@2x.png 2x"
                   width="600" height="600">
@@ -106,92 +105,94 @@
             <button class="main-slider__button main-slider__button_right" type="button"></button>
           </div>
 
-          <div class="main-slider__wrapper main-slider__wrapper_lavender visually-hidden">
-            <button class="main-slider__button"></button>
-            <picture class="main-slider__picture">
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="images/slider/desktop/lavender.webp 1x, images/slider/desktop/lavender@2x.webp 2x"
-                width="600" height="600">
-              <source type="image/webp" media="(min-width: 768px)"
-              srcset="images/slider/tablet/lavender.webp 1x, images/slider/tablet/lavender@2x.webp 2x"
-              width="476" height="476">
-
-              <source media="(min-width: 1440px)"
-                srcset="images/slider/desktop/lavender.png 1x, images/slider/desktop/lavender@2x.png 2x"
-                width="600" height="600">
-              <source media="(min-width: 768px)"
-              srcset="images/slider/tablet/lavender.png 1x, images/slider/tablet/lavender@2x.png 2x"
-              width="476" height="476">
-              <img class="main-slider__image" src="images/slider/lavender.png"
-                srcset="images/slider/lavender@2x.png 2x" width="280" height="280"
-                alt="Кофе Лавандовый Латте">
-            </picture>
-            <div class="main-slider__info">
-              <p>Новинка!</p>
-              <h3 class="main-slider__title">Лавандовый Латте</h3>
-              <p class="main-slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+          <div class="main-slider__container main-slider__container_lavender main-slider__container_hidden">
+            <button class="main-slider__button main-slider__button_left" type="button"></button>
+            <div class="main-slider__wrapper">
+              <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/lavender.webp 1x, images/slider/desktop/lavender@2x.webp 2x"
+                  width="600" height="600">
+                <source type="image/webp" media="(min-width: 768px)"
+                srcset="images/slider/tablet/lavender.webp 1x, images/slider/tablet/lavender@2x.webp 2x"
+                width="476" height="476">
+                <source media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/lavender.png 1x, images/slider/desktop/lavender@2x.png 2x"
+                  width="600" height="600">
+                <source media="(min-width: 768px)"
+                srcset="images/slider/tablet/lavender.png 1x, images/slider/tablet/lavender@2x.png 2x"
+                width="476" height="476">
+                <img class="main-slider__image" src="images/slider/lavender.png"
+                  srcset="images/slider/lavender@2x.png 2x" width="280" height="280"
+                  alt="Кофе Лавандовый Латте">
+              </picture>
+              <div class="main-slider__info">
+                <p>Новинка!</p>
+                <h3 class="main-slider__title">Лавандовый Латте</h3>
+                <p class="main-slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="main-slider__order">
+                  <p class="main-slider__price main-slider__price_old">285₽</p>
+                  <p class="main-slider__price">265₽</p>
+                  <button class="main-slider__order-btn button">Заказать</button>
+                </div>
+              </div>
+              <div class="main-slider__toggles">
+                <button class="main-slider__toggle" type="button" tabindex="0">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button>
+                <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
+                    <span class="visually-hidden">Второй слайд</span>
+                </button>
+                <button class="main-slider__toggle" type="button" tabindex="0">
+                  <span class="visually-hidden">Третий слайд</span>
+                </button>
+              </div>
             </div>
-            <div class="main-slider__order">
-              <p class="main-slider__price main-slider__price_old">285₽</p>
-              <p class="main-slider__price">265₽</p>
-              <button class="main-slider__order-btn">Заказать</button>
-            </div>
-            <button class="main-slider__button"></button>
-            <div class="main-slider__toggles">
-              <button class="main-slider__toggle" type="button" tabindex="0">
-                <span class="visually-hidden">Первый слайд</span>
-              </button>
-              <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
-                  <span class="visually-hidden">Второй слайд</span>
-              </button>
-              <button class="main-slider__toggle" type="button" tabindex="0">
-                <span class="visually-hidden">Третий слайд</span>
-              </button>
-            </div>
+            <button class="main-slider__button main-slider__button_right" type="button"></button>
           </div>
 
-          <div class="main-slider__wrapper main-slider__wrapper_espresso visually-hidden">
-            <button class="main-slider__button"></button>
-            <picture class="main-slider__picture">
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="images/slider/desktop/espresso.webp 1x, images/slider/desktop/espresso@2x.webp 2x"
-                width="600" height="600">
-              <source type="image/webp" media="(min-width: 768px)"
-              srcset="images/slider/tablet/espresso.webp 1x, images/slider/tablet/espresso@2x.webp 2x"
-              width="476" height="476">
-
-              <source media="(min-width: 1440px)"
-                srcset="images/slider/desktop/espresso.png 1x, images/slider/desktop/espresso@2x.png 2x"
-                width="600" height="600">
-              <source media="(min-width: 768px)"
-              srcset="images/slider/tablet/espresso.png 1x, images/slider/tablet/espresso@2x.png 2x"
-              width="476" height="476">
-              <img class="main-slider__image" src="images/slider/espresso.png"
-                srcset="images/slider/espresso@2x.png 2x" width="280" height="280"
-                alt="Кофе Тройной Эспрессо">
-            </picture>
-            <div class="main-slider__info">
-              <p>Новинка!</p>
-              <h3 class="main-slider__title">Тройной Эспрессо</h3>
-              <p class="main-slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+          <div class="main-slider__container main-slider__container_espresso main-slider__container_hidden">
+            <button class="main-slider__button main-slider__button_left" type="button"></button>
+            <div class="main-slider__wrapper">
+              <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/espresso.webp 1x, images/slider/desktop/espresso@2x.webp 2x"
+                  width="600" height="600">
+                <source type="image/webp" media="(min-width: 768px)"
+                srcset="images/slider/tablet/espresso.webp 1x, images/slider/tablet/espresso@2x.webp 2x"
+                width="476" height="476">
+                <source media="(min-width: 1440px)"
+                  srcset="images/slider/desktop/espresso.png 1x, images/slider/desktop/espresso@2x.png 2x"
+                  width="600" height="600">
+                <source media="(min-width: 768px)"
+                srcset="images/slider/tablet/espresso.png 1x, images/slider/tablet/espresso@2x.png 2x"
+                width="476" height="476">
+                <img class="main-slider__image" src="images/slider/espresso.png"
+                  srcset="images/slider/espresso@2x.png 2x" width="280" height="280"
+                  alt="Кофе Тройной Эспрессо">
+              </picture>
+              <div class="main-slider__info">
+                <p>Новинка!</p>
+                <h3 class="main-slider__title">Тройной Эспрессо</h3>
+                <p class="main-slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="main-slider__order">
+                  <p class="main-slider__price main-slider__price_old">395₽</p>
+                  <p class="main-slider__price">375₽</p>
+                  <button class="main-slider__order-btn button">Заказать</button>
+                </div>
+              </div>
+              <div class="main-slider__toggles">
+                <button class="main-slider__toggle" type="button" tabindex="0">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button>
+                <button class="main-slider__toggle" type="button" tabindex="0">
+                    <span class="visually-hidden">Второй слайд</span>
+                </button>
+                <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
+                  <span class="visually-hidden">Третий слайд</span>
+                </button>
+              </div>
             </div>
-            <div class="main-slider__order">
-              <p class="main-slider__price main-slider__price_old">395₽</p>
-              <p class="main-slider__price">375₽</p>
-              <button class="main-slider__order-btn">Заказать</button>
-            </div>
-            <button class="main-slider__button"></button>
-            <div class="main-slider__toggles">
-              <button class="main-slider__toggle" type="button" tabindex="0">
-                <span class="visually-hidden">Первый слайд</span>
-              </button>
-              <button class="main-slider__toggle" type="button" tabindex="0">
-                  <span class="visually-hidden">Второй слайд</span>
-              </button>
-              <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
-                <span class="visually-hidden">Третий слайд</span>
-              </button>
-            </div>
+            <button class="main-slider__button main-slider__button_right" type="button"></button>
           </div>
         </section>
         <section class="features">
@@ -226,14 +227,14 @@
               <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
                 <div class="catalog__filter-wrapper">
                   <fieldset class="catalog__filter-fieldset">
-                    <legend class="catalog__filter-title title">Цена</legend>
+                    <legend class="catalog__filter-title">Цена</legend>
                     <div class="filter__range-filter range-filter">
                       <div class="range-filter__controls">
                         <div class="range-filter__scale">
                           <div class="range-filter__bar"></div>
                         </div>
-                        <div class="range-filter__toggle range-filter__toggle--min" tabindex="0"></div>
-                        <div class="range-filter__toggle range-filter__toggle--max" tabindex="0"></div>
+                        <div class="range-filter__toggle range-filter__toggle_min" tabindex="0"></div>
+                        <div class="range-filter__toggle range-filter__toggle_max" tabindex="0"></div>
                       </div>
                       <div class="range-filter__price-wrapper">
                         <label class="visually-hidden" for="price-min">от</label>
@@ -309,7 +310,7 @@
             <section class="catalig__products">
               <div class="catalog__sort">
                 <h2 class="catalog__sort-title">Сортировка:</h2>
-                <div class="catalog__sort-categories">по умолчанию</div>
+                <button class="catalog__sort-categories" type="button">по умолчанию</button>
               </div>
               <div class="catalog__products">
                 <div class="catalog__product-wrapper">

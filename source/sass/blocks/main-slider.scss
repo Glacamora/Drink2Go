@@ -1,7 +1,9 @@
 .main-slider__container {
-  display: flex;
   justify-content: center;
-  background-color: $flat_white;
+
+  &_flat {
+    background-color: $flat_white;
+  }
 
   &_lavender {
     background-color: $lavender_latte;
@@ -9,6 +11,14 @@
 
   &_espresso {
     background-color: $espresso;
+  }
+
+  &_hidden {
+    display: none;
+  }
+
+  &_active {
+    display: flex;
   }
 }
 
@@ -93,25 +103,52 @@
 }
 
 .main-slider__button {
-  top: 325px;
   position: relative;
   border: none;
+  min-width: 23px;
+  height: 711px;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  min-width: 11px;
-  height: 20px;
   padding: 0;
   cursor: pointer;
 
+  &_left,
+  &_right {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 311px;
+      width: 13px;
+      height: 13px;
+      border-top: 2px solid #7859cf;
+      border-right: 2px solid #7859cf;
+    }
+  }
+
   &_left {
-    background-image: url(../../images/slider/slider-arrow-left.svg);
-    right: -17px;
+    right: -23px;
+
+    &::before {
+      transform: rotate(-135deg);;
+      left: 9px;
+      top: 311px;
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba($base_primary, $alpha: 0.25), rgba($base_primary, $alpha: 0) 100%);
+    }
   }
 
   &_right {
-    background-image: url(../../images/slider/slider-arrow-right.svg);
-    left: -17px;
+    left: -23px;
+
+    &::before {
+      transform: rotate(47deg);
+      left: -1px;
+    }
+
+    &:active {
+      background: linear-gradient(-90deg, rgba($base_primary, $alpha: 0.25), rgba($base_primary, $alpha: 0) 100%);
+    }
   }
 }
 
@@ -121,7 +158,9 @@
 
 @media (min-width: $tablet-width) {
   .main-slider__container {
-    background: linear-gradient(180deg, $flat_white 0, $flat_white 77%, $base_white 77%);
+    &_flat {
+      background: linear-gradient(180deg, $flat_white 0, $flat_white 77%, $base_white 77%);
+    }
 
     &_lavender {
       background: inear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $lavender_latte 77%);
@@ -163,24 +202,46 @@
   }
 
   .main-slider__button {
+    min-width: 80px;
+    height: 637px;
+
     &_right {
-      left: -34px;
+      left: -71px;
+
+      &::before {
+        top: 266px;
+        left: 31px;
+      }
     }
 
     &_left {
-      right: -34px;
+      right: -70px;
+
+      &::before {
+        top: 266px;
+        left: 31px;
+      }
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-slider__container {
-    background: $flat_white;
+    &_flat {
+      background: $flat_white;
+    }
+
+    &_lavender {
+      background: $lavender_latte;
+    }
+
+    &_espresso {
+      background: $espresso;
+    }
   }
 
   .main-slider__wrapper {
     flex-direction: row-reverse;
-    background: $flat_white;
     padding-bottom: 79px;
   }
 
@@ -204,14 +265,22 @@
   }
 
   .main-slider__button {
-    top: 349px;
+    height: 714px;
 
     &_right {
-      left: 70px;
+      left: 25px;
+
+      &::before {
+        top: 347px;
+      }
     }
 
     &_left {
-      right: 70px;
+      left: -25px;
+
+      &::before {
+        top: 347px;
+      }
     }
   }
 

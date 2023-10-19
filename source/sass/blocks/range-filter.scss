@@ -1,0 +1,181 @@
+.range-filter__controls {
+  position: relative;
+  border-radius: 5px;
+  padding: 11px 0;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+.range-filter__scale {
+  height: 2px;
+  background-color: $light_grey;
+}
+
+.range-filter__bar {
+  position: relative;
+  top: -2px;
+  width: 84%;
+  height: 4px;
+  background-color: $primary_lighter;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid $primary_lighter;
+  background-color: $base_white;
+  cursor: pointer;
+
+  &_min {
+    left: 0;
+  }
+
+  &_max {
+    left: 84%;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $altprimary_opacity_25;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $base_primary;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.range-filter__controls--disabled .range-filter__bar {
+  background-color: $base_grey;
+}
+
+.range-filter__controls--disabled .range-filter__toggle {
+  border-color: $base_grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.range-filter__price-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  justify-content: space-between;
+  column-gap: 43px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 137px;
+    width: 8px;
+    height: 2px;
+    background-color: $base_grey;
+  }
+}
+
+.range-filter__price {
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  border: 2px solid $primary_lighter;
+  border-radius: 4px;
+  width: 95px;
+  padding: 8px 10px;
+  color: $base_black;
+  background-color: $base_white;
+
+  &:focus {
+    border-color: $primary_darker;
+    outline: none;
+  }
+
+  &:disabled {
+    color: $base_grey;
+    background-color: $lightest_grey;
+    border-color: $light_grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range-filter {
+    max-width: 220px;
+  }
+
+  .range-filter__controls {
+    margin-bottom: 22px;
+  }
+
+  .range-filter__bar {
+    width: 86%;
+  }
+
+  .range-filter__toggle {
+    &_max {
+      left: 80%;
+    }
+  }
+
+  .range-filter__price-wrapper {
+    column-gap: 33px;
+
+    &::after {
+      left: 107px;
+    }
+  }
+
+  .range-filter__price {
+    width: 69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range-filter__controls {
+    width: 300px;
+  }
+
+  .range-filter__toggle {
+    &_max {
+      left: 86%;
+    }
+  }
+
+  .range-filter__price-wrapper {
+    &::after {
+      left: 145px;
+    }
+  }
+
+  .range-filter__price {
+    width: 109px;
+  }
+}
