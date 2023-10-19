@@ -57,9 +57,14 @@
       </header>
       <main>
         <section class="main-slider">
-          <div class="main-slider__container main-slider__container_flat main-slider__container_active">
+
+
+          <div class="main-slider__container">
             <button class="main-slider__button main-slider__button_left" type="button"></button>
-            <div class="main-slider__wrapper">
+            <button class="main-slider__button main-slider__button_right" type="button"></button>
+
+
+            <div class="main-slider__wrapper main-slider__container_flat">
               <picture class="main-slider__picture">
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="images/slider/desktop/flat_white@1x.webp 1x, images/slider/desktop/flat_white@2x.webp 2x"
@@ -89,25 +94,10 @@
                   <button class="main-slider__order-btn button" type="button">Заказать</button>
                 </div>
               </div>
-
-              <div class="main-slider__toggles">
-                <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
-                  <span class="visually-hidden">Первый слайд</span>
-                </button>
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                    <span class="visually-hidden">Второй слайд</span>
-                </button>
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                  <span class="visually-hidden">Третий слайд</span>
-                </button>
-              </div>
             </div>
-            <button class="main-slider__button main-slider__button_right" type="button"></button>
-          </div>
 
-          <div class="main-slider__container main-slider__container_lavender main-slider__container_hidden">
-            <button class="main-slider__button main-slider__button_left" type="button"></button>
-            <div class="main-slider__wrapper">
+
+            <div class="main-slider__wrapper main-slider__container_lavender main-slider__wrapper_hidden">
               <picture class="main-slider__picture">
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="images/slider/desktop/lavender.webp 1x, images/slider/desktop/lavender@2x.webp 2x"
@@ -135,24 +125,9 @@
                   <button class="main-slider__order-btn button">Заказать</button>
                 </div>
               </div>
-              <div class="main-slider__toggles">
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                  <span class="visually-hidden">Первый слайд</span>
-                </button>
-                <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
-                    <span class="visually-hidden">Второй слайд</span>
-                </button>
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                  <span class="visually-hidden">Третий слайд</span>
-                </button>
-              </div>
             </div>
-            <button class="main-slider__button main-slider__button_right" type="button"></button>
-          </div>
 
-          <div class="main-slider__container main-slider__container_espresso main-slider__container_hidden">
-            <button class="main-slider__button main-slider__button_left" type="button"></button>
-            <div class="main-slider__wrapper">
+            <div class="main-slider__wrapper main-slider__wrapper_hidden main-slider__container_espresso">
               <picture class="main-slider__picture">
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="images/slider/desktop/espresso.webp 1x, images/slider/desktop/espresso@2x.webp 2x"
@@ -180,19 +155,19 @@
                   <button class="main-slider__order-btn button">Заказать</button>
                 </div>
               </div>
-              <div class="main-slider__toggles">
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                  <span class="visually-hidden">Первый слайд</span>
-                </button>
-                <button class="main-slider__toggle" type="button" tabindex="0">
-                    <span class="visually-hidden">Второй слайд</span>
-                </button>
-                <button class="main-slider__toggle main-slider__toggle_active" type="button" tabindex="0">
-                  <span class="visually-hidden">Третий слайд</span>
-                </button>
-              </div>
             </div>
-            <button class="main-slider__button main-slider__button_right" type="button"></button>
+
+            <div class="main-slider__toggles">
+              <button class="main-slider__toggle main-slider__toggle_active" data-number="0" type="button" tabindex="0">
+                <span class="visually-hidden">Первый слайд</span>
+              </button>
+              <button class="main-slider__toggle" type="button" data-number="1" tabindex="0">
+                  <span class="visually-hidden">Второй слайд</span>
+              </button>
+              <button class="main-slider__toggle" type="button" data-number="2" tabindex="0">
+                <span class="visually-hidden">Третий слайд</span>
+              </button>
+            </div>
           </div>
         </section>
         <section class="features">

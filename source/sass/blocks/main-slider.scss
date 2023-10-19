@@ -1,5 +1,7 @@
 .main-slider__container {
   justify-content: center;
+  position: relative;
+  height: 714px;
 
   &_flat {
     background-color: $flat_white;
@@ -28,6 +30,10 @@
   align-items: center;
   text-align: center;
   padding-bottom: 60px;
+}
+
+.main-slider__wrapper_hidden {
+  display: none;
 }
 
 .main-slider__info {
@@ -103,7 +109,7 @@
 }
 
 .main-slider__button {
-  position: relative;
+  position: absolute;
   border: none;
   min-width: 23px;
   height: 711px;
@@ -125,7 +131,7 @@
   }
 
   &_left {
-    right: -23px;
+    left: 0;
 
     &::before {
       transform: rotate(-135deg);;
@@ -139,7 +145,7 @@
   }
 
   &_right {
-    left: -23px;
+    right: 0;
 
     &::before {
       transform: rotate(47deg);
@@ -163,11 +169,11 @@
     }
 
     &_lavender {
-      background: inear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $lavender_latte 77%);
+      background: linear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $base_white 77%);
     }
 
     &_espresso {
-      background: inear-gradient(180deg, $espresso 0, $espresso 77%, $espresso 77%);
+      background: linear-gradient(180deg, $espresso 0, $espresso 77%, $base_white 77%);
     }
   }
 
@@ -206,7 +212,7 @@
     height: 637px;
 
     &_right {
-      left: -71px;
+      right: 0;
 
       &::before {
         top: 266px;
@@ -215,7 +221,7 @@
     }
 
     &_left {
-      right: -70px;
+      left: 0;
 
       &::before {
         top: 266px;
@@ -242,6 +248,8 @@
 
   .main-slider__wrapper {
     flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
     padding-bottom: 79px;
   }
 
@@ -268,7 +276,7 @@
     height: 714px;
 
     &_right {
-      left: 25px;
+      right: 0;
 
       &::before {
         top: 347px;
@@ -276,7 +284,7 @@
     }
 
     &_left {
-      left: -25px;
+      left: 0;
 
       &::before {
         top: 347px;
@@ -286,10 +294,13 @@
 
   .main-slider__toggles {
     display: flex;
-    position: relative;
-    bottom: -350px;
+    position: absolute;
+    bottom: 60px;
     gap: 8px;
-    margin-bottom: 60px;
+    left: 0;
+    right:0;
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .main-slider__toggle {
