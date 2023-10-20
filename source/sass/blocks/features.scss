@@ -11,7 +11,7 @@
 }
 
 .features__wrapper {
-  padding: 50px 20px 60px 20px;
+  padding: 43px 20px 20px;
 }
 
 .features__pin {
@@ -25,8 +25,8 @@
 
 .features__item {
   position: relative;
-  padding-top: 55px;
-  margin-bottom: 36px;
+  padding-top: 59px;
+  margin-bottom: 39px;
 
   &::before {
     content: "";
@@ -34,36 +34,37 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    top: -10px;
-    left: 115px;
+    top: -6px;
+    left: 113px;
     height: 56px;
   }
 
   &_speed {
     &::before {
-      background-image: url("../../images/icons/features/speed-icon.svg");
+      background-image: url("../../images/icons/stack.svg#features_speed-icon");
       width: 50px;
     }
   }
 
   &_convenience {
     &::before {
-      background-image: url("../../images/icons/features/convenience-icon.svg");
+      background-image: url("../../images/icons/stack.svg#features_convenience-icon");
       width: 52px;
     }
   }
 
   &_energy {
     &::before {
-      background-image: url("../../images/icons/features/energy-icon.svg");
-      left: 120px;
+      background-image: url("../../images/icons/stack.svg#features_energy-icon");
+      left: 118px;
       width: 42px;
     }
   }
 
   &_eco {
     &::before {
-      background-image: url("../../images/icons/features/eco-icon.svg");
+      background-image: url("../../images/icons/stack.svg#features_eco-icon");
+      left: 116px;
       width: 46px;
     }
   }
@@ -94,6 +95,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features__wrapper {
+    padding-top: 50px;
+  }
+
   .features__title {
     font-size: 42px;
     line-height: 64px;
@@ -132,20 +137,22 @@
   .features__item-text {
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
 
     &_convenience {
       padding: 0;
     }
   }
-
-  .features__item-text {
-    text-align: left;
-  }
 }
 
 @media (min-width: $desktop-width) {
+  .features__wrapper {
+    padding-top: 92px;
+    padding-bottom: 70px;
+  }
+
   .features__title {
-    margin-bottom: 90px;
+    margin-bottom: 100px;
   }
 
   .features__items {

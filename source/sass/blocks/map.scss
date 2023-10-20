@@ -10,16 +10,16 @@
     background-repeat: no-repeat;
     width: 38px;
     height: 50px;
-    top: 188px;
-    left: 153px;
+    top: 186px;
+    left: 156px;
   }
 }
 
-@media (min-width: $tablet-width){
+@media (min-width: $tablet-width) {
   .map {
     &::before {
-      top: 216px;
-      left: 379px;
+      top: 212px;
+      left: 380px;
     }
   }
 }
@@ -28,7 +28,7 @@
   .map {
     &::before {
       top: 246px;
-      left: 714px;
+      left: 716px;
     }
   }
 }

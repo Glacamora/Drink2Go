@@ -1,9 +1,9 @@
 .button {
   border: none;
   border-radius: 4px;
-  background-color: #7859CF;
-  font-family: Montserrat;
-  color: #ffffff;
+  background-color: $base_primary;
+  font-family: $font-family-base;
+  color: $base_white;
   padding: 8px 20px;
   cursor: pointer;
 

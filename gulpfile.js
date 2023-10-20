@@ -9,7 +9,7 @@ import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
-//import { stacksvg } from "gulp-stacksvg";
+import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
@@ -85,7 +85,7 @@ export function optimizeVector () {
 export function createStack () {
   return gulp.src('source/images/icons/**/*.svg')
     .pipe(svgo())
-    //.pipe(stacksvg())
+    .pipe(stacksvg())
     .pipe(gulp.dest('build/images/icons'));
 }
 
